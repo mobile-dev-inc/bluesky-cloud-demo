@@ -1,0 +1,19 @@
+name: Maestro Cloud
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-flows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: mobile-dev-inc/action-maestro-cloud@v3.0.1
+        with:
+          api-key: ${{ secrets.MAESTRO_CLOUD_API_KEY }}
+          project-id: proj_01ks7v6fahfy6th0tj7s3r254k
+          app-binary-id: c67fc8475326aa9f280e5422f435bfeab9227ff8
+          workspace: flows
+          device-model: pixel_6
+          device-os: android-34
