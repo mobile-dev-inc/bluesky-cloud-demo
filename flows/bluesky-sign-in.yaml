@@ -1,0 +1,21 @@
+appId: xyz.blueskyweb.app
+---
+- launchApp
+
+# Welcome screen
+- assertVisible: "What's up?"
+- assertVisible: "Create account"
+- assertVisible: "Sign in"
+
+# Navigate to sign-in
+- tapOn: "Sign in"
+
+# Sign-in form
+- assertVisible: "Log in"
+- assertVisible: "Hosting provider"
+- assertVisible: "Bluesky Social"
+- assertVisible: "Account"
+- assertVisible: "Username or email address"
+- assertVisible: "Password"
+- assertVisible: "Forgot?"
+- assertVisible: "Next"
